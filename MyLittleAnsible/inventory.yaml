@@ -1,0 +1,9 @@
+hosts:
+    webserver:
+        ssh_address: 10.0.0.5
+        ssh_port: 2222
+        ssh_key_file: '/home/ansible/.ssh/ansible_key-1.pem'
+    bastion:
+        ssh_address: 10.0.0.4
+        ssh_port: 22
+        ssh_key_file: '/home/ansible/.ssh/ansible_key-1.pem'
