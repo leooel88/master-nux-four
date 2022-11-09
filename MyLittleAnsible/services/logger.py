@@ -19,3 +19,12 @@ def build_logger(name: str) -> logging.Logger:
     stream_handler.setFormatter(formatter)
     logger.addHandler(stream_handler)
     return logger
+
+def logModuleInfo(logger, host: str, op: str, params: dict) :
+    logger.info('host=' + host + ' op=' + op + ' ' + str(params))
+
+def logModuleError(logger, host: str, op: str, error: str) :
+    logger.info('host=' + host + ' op=' + op + ' status=KO error : ' + error)
+
+def logModuleSuccess(logger, host: str, op: str) :
+    logger.info('host=' + host + ' op=' + op + ' status=OK')
